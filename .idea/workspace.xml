@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8aee208-6752-42f2-992a-73f0f0c0f411" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/packages/core/lib/core.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/test/core_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/data_supabase/lib/data_supabase.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/data_supabase/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/data_supabase/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/data_supabase/test/data_supabase_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/domain/lib/domain.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/domain/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/domain/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/domain/test/domain_test.dart" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+        <option value="template" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3H0pDM8FmZAtH8PL5XUUHmifXDH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "": "template",
+    "Flutter.main.dart.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "prettierjs.PrettierConfiguration.Package": "/Users/rdmac/.nvm/versions/node/v20.11.0/lib/node_modules/prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8aee208-6752-42f2-992a-73f0f0c0f411" name="Changes" comment="" />
+      <created>1740119311596</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740119311596</updated>
+    </task>
+    <servers />
+  </component>
+</project>
