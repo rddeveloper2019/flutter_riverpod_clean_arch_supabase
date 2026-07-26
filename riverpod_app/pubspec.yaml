@@ -34,6 +34,7 @@ dependencies:
   uuid: ^4.5.3
   string_validator: ^1.2.0
   stream_transform: ^2.1.1
+  dotenv: ^4.2.0
 
   core:
     path: ../packages/core
