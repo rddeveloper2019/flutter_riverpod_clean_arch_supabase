@@ -30,3 +30,4 @@ migrate_working_dir/
 /build/
 /coverage/
 /riverpod_app/.env
+riverpod_app/.env
