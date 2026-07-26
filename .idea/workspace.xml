@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8aee208-6752-42f2-992a-73f0f0c0f411" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/packages/core/lib/core.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/test/core_test.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/data_supabase/lib/data_supabase.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/data_supabase/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/data_supabase/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/data_supabase/test/data_supabase_test.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/domain/lib/domain.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/domain/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/domain/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/domain/test/domain_test.dart" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/riverpod_app/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/riverpod_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/riverpod_app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/riverpod_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/riverpod_app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/riverpod_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/riverpod_app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +50,20 @@
     "git-widget-placeholder": "master",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/Shared/Courses/flutter_riverpod_clean_arch_supabase/packages",
     "prettierjs.PrettierConfiguration.Package": "/Users/rdmac/.nvm/versions/node/v20.11.0/lib/node_modules/prettier",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />

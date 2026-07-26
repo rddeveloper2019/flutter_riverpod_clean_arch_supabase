@@ -9,6 +9,9 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/core/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/packages/core/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/packages/core/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/data_supabase/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/data_supabase/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/data_supabase/build" />
       <excludeFolder url="file://$MODULE_DIR$/packages/domain/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/packages/domain/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/packages/domain/build" />
