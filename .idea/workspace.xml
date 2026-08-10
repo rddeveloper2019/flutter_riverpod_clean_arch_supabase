@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8aee208-6752-42f2-992a-73f0f0c0f411" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flutter_riverpod_clean_arch_supabase.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter_riverpod_clean_arch_supabase.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/riverpod_app/test/widget_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/Shared/Courses/flutter_riverpod_clean_arch_supabase/packages",
     "prettierjs.PrettierConfiguration.Package": "/Users/rdmac/.nvm/versions/node/v20.11.0/lib/node_modules/prettier",
-    "settings.editor.selected.configurable": "dart.settings",
+    "settings.editor.selected.configurable": "actions.on.save",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
