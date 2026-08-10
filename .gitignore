@@ -32,6 +32,6 @@ migrate_working_dir/
 /riverpod_app/.env
 riverpod_app/.env
 /.idea
-/.idea
 .idea/workspace.xml
+workspace.xml
 /.idea
