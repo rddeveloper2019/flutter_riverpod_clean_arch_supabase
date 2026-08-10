@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8aee208-6752-42f2-992a-73f0f0c0f411" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/flutter_riverpod_clean_arch_supabase.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter_riverpod_clean_arch_supabase.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/lib/src/errors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/lib/src/errors/errors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/lib/src/errors/exceptions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/lib/src/errors/failures.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/lib/src/usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/lib/src/usecase/usecase.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/core/lib/src/usecase/usecase_inteface.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/lib/src/core.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Dart File" />
         <option value="template" />
+        <option value="Dart File" />
       </list>
     </option>
   </component>
@@ -48,7 +54,7 @@
     "git-widget-placeholder": "master",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/Shared/Courses/flutter_riverpod_clean_arch_supabase/packages",
+    "last_opened_file_path": "/Users/Shared/Courses/flutter_riverpod_clean_arch_supabase/packages/core/lib/src",
     "prettierjs.PrettierConfiguration.Package": "/Users/rdmac/.nvm/versions/node/v20.11.0/lib/node_modules/prettier",
     "settings.editor.selected.configurable": "actions.on.save",
     "show.migrate.to.gradle.popup": "false"
@@ -56,6 +62,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/core/lib/src" />
       <recent name="$PROJECT_DIR$/packages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
