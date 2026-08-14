@@ -17,8 +17,8 @@ class DatabaseException extends AppException {
   const DatabaseException({required super.message});
 }
 
-class PermissionsException extends AppException {
-  const PermissionsException({required super.message});
+class PermissionException extends AppException {
+  const PermissionException({required super.message});
 }
 
 class NotFoundException extends AppException {
