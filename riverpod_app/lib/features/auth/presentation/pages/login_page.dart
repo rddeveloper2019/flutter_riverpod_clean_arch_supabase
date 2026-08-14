@@ -101,7 +101,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                     ),
                     const SizedBox(height: 16),
                     TextFormField(
-                      controller: _emailController,
+                      controller: _passwordController,
                       decoration: const InputDecoration(
                         labelText: 'Password',
                         helperText: '6 to 20 characters',
@@ -140,13 +140,13 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           : const Text('Login'),
                     ),
                     const SizedBox(height: 16),
-                    ElevatedButton(
+                    TextButton(
                       onPressed: !isLoading
                           ? () {
                               context.goNamed(RouteNames.signup);
                             }
                           : null,
-                      child: const Text('Signup'),
+                      child: const Text('Need an account?'),
                     ),
                   ],
                 ),
