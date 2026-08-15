@@ -137,4 +137,10 @@ class PostListController extends _$PostListController {
       );
     }
   }
+
+  void consumeTransientFailure() {
+    final current = state.value;
+    if (current == null) return;
+    state = AsyncData(current.copyWith(transientFailure: () => null));
+  }
 }
