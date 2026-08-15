@@ -1,8 +1,6 @@
 import 'package:core/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../../../../core/errors/presentation_failure_exception.dart';
 import '../../../../core/widgets/async_error_retry.dart';
 import '../controllers/post_list_controller.dart';
@@ -23,12 +21,13 @@ class _PostPageState extends ConsumerState<PostPage> {
   void initState() {
     super.initState();
     _scrollController.addListener(_onScroll);
+    ref.read(postListControllerProvider.notifier).fetchNextPage();
   }
 
   void _onScroll() {
     if (_scrollController.position.pixels >=
         _scrollController.position.maxScrollExtent - 200) {
-      // ref.read(postListControllerProvider.notifier).fetchNextPage();
+      ref.read(postListControllerProvider.notifier).fetchNextPage();
     }
   }
 
