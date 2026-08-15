@@ -34,7 +34,7 @@ final class PostListControllerProvider
 }
 
 String _$postListControllerHash() =>
-    r'ff9895fe83fad74e95c991b7234eb32b3b44201f';
+    r'bf74f738e93985c8caf388d5532734106dbd925c';
 
 abstract class _$PostListController extends $AsyncNotifier<PostListState> {
   FutureOr<PostListState> build();

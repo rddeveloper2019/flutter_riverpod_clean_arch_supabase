@@ -22,3 +22,13 @@ PostRepository postRepository(Ref ref) {
 GetPostsUseCase getPostsUseCase(Ref ref) {
   return GetPostsUseCase(ref.watch(postRepositoryProvider));
 }
+
+@riverpod
+CreatePostUseCase createPostUseCase(Ref ref) {
+  return CreatePostUseCase(ref.watch(postRepositoryProvider));
+}
+
+@riverpod
+UploadPostImageUseCase uploadPostImageUseCase(Ref ref) {
+  return UploadPostImageUseCase(ref.watch(postRepositoryProvider));
+}
