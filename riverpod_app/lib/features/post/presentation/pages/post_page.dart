@@ -53,6 +53,22 @@ class _PostPageState extends ConsumerState<PostPage> {
         showErrorSnackBar(context, message: nextFailure.message);
         ref.read(postListControllerProvider.notifier).consumeTransientFailure();
       }
+
+      final prevScrollId = prev?.value?.scrollToTopEventId;
+      final nextScrollId = next.value?.scrollToTopEventId;
+      final didScroll = prevScrollId != nextScrollId && nextScrollId != null;
+
+      if (didScroll) {
+        if (!mounted) return;
+        if (_scrollController.hasClients) {
+          _scrollController.animateTo(
+            0.0,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.linear,
+          );
+        }
+        ref.read(postListControllerProvider.notifier).consumeScrollEvent();
+      }
     });
 
     final asyncState = ref.watch(postListControllerProvider);

@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:domain/auth.dart';
 import 'package:domain/post.dart';
 import 'package:flutter_riverpod/experimental/mutation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
+import '../../../../core/bus/global_event.dart';
+import '../../../../core/bus/global_event_bus_provider.dart';
 import '../../../../core/errors/presentation_failure_exception.dart';
 import '../providers/post_providers.dart';
 
@@ -48,7 +48,11 @@ Future<PostDisplay> runCreatePost({
 
     return createPostResult.fold(
       (failure) => throw PresentationFailureException(failure),
-      (created) => created,
+      (created) {
+        final bus = tsx.get(globalEventBusProvider);
+        bus.add(PostCreatedDispatched(post: created));
+        return created;
+      },
     );
   });
 }

@@ -7,6 +7,9 @@ class PostDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text('PostDetailPage')));
+    return Scaffold(
+      appBar: AppBar(),
+      body: const Center(child: Text('PostDetailPage')),
+    );
   }
 }

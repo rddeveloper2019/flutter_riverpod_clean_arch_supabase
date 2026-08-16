@@ -1,6 +1,10 @@
+import 'dart:async';
+
 import 'package:domain/post.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../../core/bus/global_event.dart';
+import '../../../../core/bus/global_event_bus_provider.dart';
 import '../../../../core/errors/unexpected_failure.dart';
 import '../providers/post_providers.dart';
 import 'post_list_state.dart';
@@ -13,6 +17,10 @@ const _pageSize = 5;
 class PostListController extends _$PostListController {
   @override
   Future<PostListState> build() async {
+    final bus = ref.watch(globalEventBusProvider);
+    final sub = bus.stream.listen(_onGlobalEvent);
+
+    ref.onDispose(sub.cancel);
     final useCase = ref.watch(getPostsUseCaseProvider);
     final result = await useCase(
       const GetPostsParams(offset: 0, limit: _pageSize),
@@ -142,5 +150,47 @@ class PostListController extends _$PostListController {
     final current = state.value;
     if (current == null) return;
     state = AsyncData(current.copyWith(transientFailure: () => null));
+  }
+
+  bool shouldDeferGlobalEvent(PostListState current) {
+    if (current.status == PostListStatus.fetchingNextPage) return false;
+    return current.status == PostListStatus.refreshing ||
+        current.status == PostListStatus.refilling;
+  }
+
+  void _onGlobalEvent(GlobalEvent event) {
+    final current = state.value;
+    if (current == null) return;
+    if (shouldDeferGlobalEvent(current)) return;
+
+    switch (event) {
+      case PostCreatedDispatched(post: final post):
+        prependNewPost(post);
+        requestScrollToTp();
+      case _:
+    }
+  }
+
+  void prependNewPost(PostDisplay post) {
+    final current = state.value;
+    if (current == null) return;
+    if (current.posts.any((p) => p.postId == post.postId)) return;
+    state = AsyncData(current.copyWith(posts: [post, ...current.posts]));
+  }
+
+  void requestScrollToTp() {
+    final current = state.value;
+    if (current == null) return;
+    state = AsyncData(
+      current.copyWith(
+        scrollToTopEventId: () => DateTime.now().millisecondsSinceEpoch,
+      ),
+    );
+  }
+
+  void consumeScrollEvent() {
+    final current = state.value;
+    if (current == null) return;
+    state = AsyncData(current.copyWith(scrollToTopEventId: () => null));
   }
 }
