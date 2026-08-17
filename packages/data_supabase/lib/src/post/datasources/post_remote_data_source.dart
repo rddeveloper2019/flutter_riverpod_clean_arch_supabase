@@ -20,4 +20,12 @@ abstract interface class PostRemoteDataSource {
     required File image,
     String? postId,
   });
+
+  Future<PostDisplayModel> getPostDetail({required String postId});
+
+  Future<List<CommentDisplayModel>> getComments({
+    required String postId,
+    required int offset,
+    required int limit,
+  });
 }

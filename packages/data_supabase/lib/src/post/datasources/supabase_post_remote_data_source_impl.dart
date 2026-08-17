@@ -129,4 +129,77 @@ class SupabasePostRemoteDataSourceImpl implements PostRemoteDataSource {
       throw UnknownException(message: e.toString());
     }
   }
+
+  @override
+  Future<List<CommentDisplayModel>> getComments({
+    required String postId,
+    required int offset,
+    required int limit,
+  }) async {
+    try {
+      if (_supabaseClient.auth.currentUser == null) {
+        throw const AuthenticationException(
+          message: 'User is not authenticated',
+        );
+      }
+      final to = offset + limit - 1;
+
+      final commentMapsList = await _supabaseClient
+          .from(Views.commentDisplayView)
+          .select()
+          .eq('post_id', postId)
+          .range(offset, to);
+
+      return commentMapsList
+          .map((comment) => CommentDisplayModel.fromJson(comment))
+          .toList();
+    } on PostgrestException catch (e) {
+      if (e.code == PostgresErrors.insufficientPrivilege) {
+        throw PermissionException(message: e.message);
+      }
+      if (e.code == PostgresErrors.moreThanOneOrNoItemsReturned) {
+        throw NotFoundException(message: e.message);
+      }
+      throw DatabaseException(message: e.message);
+    } on AuthenticationException {
+      rethrow;
+    } on SocketException {
+      throw const NetworkException();
+    } catch (e) {
+      throw UnknownException(message: e.toString());
+    }
+  }
+
+  @override
+  Future<PostDisplayModel> getPostDetail({required String postId}) async {
+    try {
+      if (_supabaseClient.auth.currentUser == null) {
+        throw const AuthenticationException(
+          message: 'User is not authenticated',
+        );
+      }
+
+      final postDisplayViewModelMap = await _supabaseClient
+          .from(Views.postDisplayView)
+          .select()
+          .eq('post_id', postId)
+          .single();
+
+      return PostDisplayModel.fromJson(postDisplayViewModelMap);
+    } on PostgrestException catch (e) {
+      if (e.code == PostgresErrors.insufficientPrivilege) {
+        throw PermissionException(message: e.message);
+      }
+      if (e.code == PostgresErrors.moreThanOneOrNoItemsReturned) {
+        throw NotFoundException(message: e.message);
+      }
+      throw DatabaseException(message: e.message);
+    } on AuthenticationException {
+      rethrow;
+    } on SocketException {
+      throw const NetworkException();
+    } catch (e) {
+      throw UnknownException(message: e.toString());
+    }
+  }
 }
