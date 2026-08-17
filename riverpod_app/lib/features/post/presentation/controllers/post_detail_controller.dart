@@ -10,14 +10,14 @@ import 'post_detail_state.dart';
 part 'post_detail_controller.g.dart';
 
 @riverpod
-class MyNotifier extends _$MyNotifier {
+class PostDetailController extends _$PostDetailController {
   @override
   Future<PostDetailState> build(String postId) async {
     final useCase = ref.watch(getPostDetailUseCaseProvider);
     final result = await useCase(postId);
     return result.fold(
-      (failure) => throw PresentationFailureException(failure),
-      (post) => PostDetailState(post: post),
+          (failure) => throw PresentationFailureException(failure),
+          (post) => PostDetailState(post: post),
     );
   }
 
@@ -42,12 +42,13 @@ class MyNotifier extends _$MyNotifier {
 
       state = AsyncData(
         result.fold(
-          (failure) => latest.copyWith(
-            isRefreshing: false,
-            transientFailure: () => failure,
-          ),
+              (failure) =>
+              latest.copyWith(
+                isRefreshing: false,
+                transientFailure: () => failure,
+              ),
 
-          (post) {
+              (post) {
             ref
                 .read(globalEventBusProvider)
                 .add(PostUpdatedDispatched(post: post));

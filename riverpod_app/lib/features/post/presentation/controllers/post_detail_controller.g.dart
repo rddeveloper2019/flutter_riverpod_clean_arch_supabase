@@ -9,39 +9,39 @@ part of 'post_detail_controller.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
 
-@ProviderFor(MyNotifier)
-final myProvider = MyNotifierFamily._();
+@ProviderFor(PostDetailController)
+final postDetailControllerProvider = PostDetailControllerFamily._();
 
-final class MyNotifierProvider
-    extends $AsyncNotifierProvider<MyNotifier, PostDetailState> {
-  MyNotifierProvider._({
-    required MyNotifierFamily super.from,
+final class PostDetailControllerProvider
+    extends $AsyncNotifierProvider<PostDetailController, PostDetailState> {
+  PostDetailControllerProvider._({
+    required PostDetailControllerFamily super.from,
     required String super.argument,
   }) : super(
          retry: null,
-         name: r'myProvider',
+         name: r'postDetailControllerProvider',
          isAutoDispose: true,
          dependencies: null,
          $allTransitiveDependencies: null,
        );
 
   @override
-  String debugGetCreateSourceHash() => _$myNotifierHash();
+  String debugGetCreateSourceHash() => _$postDetailControllerHash();
 
   @override
   String toString() {
-    return r'myProvider'
+    return r'postDetailControllerProvider'
         ''
         '($argument)';
   }
 
   @$internal
   @override
-  MyNotifier create() => MyNotifier();
+  PostDetailController create() => PostDetailController();
 
   @override
   bool operator ==(Object other) {
-    return other is MyNotifierProvider && other.argument == argument;
+    return other is PostDetailControllerProvider && other.argument == argument;
   }
 
   @override
@@ -50,34 +50,35 @@ final class MyNotifierProvider
   }
 }
 
-String _$myNotifierHash() => r'89c95aa53e354f8763b30e3ba725e1fc03321376';
+String _$postDetailControllerHash() =>
+    r'293e3fbfb62a3b1603c057777c062b47d80fa58f';
 
-final class MyNotifierFamily extends $Family
+final class PostDetailControllerFamily extends $Family
     with
         $ClassFamilyOverride<
-          MyNotifier,
+          PostDetailController,
           AsyncValue<PostDetailState>,
           PostDetailState,
           FutureOr<PostDetailState>,
           String
         > {
-  MyNotifierFamily._()
+  PostDetailControllerFamily._()
     : super(
         retry: null,
-        name: r'myProvider',
+        name: r'postDetailControllerProvider',
         dependencies: null,
         $allTransitiveDependencies: null,
         isAutoDispose: true,
       );
 
-  MyNotifierProvider call(String postId) =>
-      MyNotifierProvider._(argument: postId, from: this);
+  PostDetailControllerProvider call(String postId) =>
+      PostDetailControllerProvider._(argument: postId, from: this);
 
   @override
-  String toString() => r'myProvider';
+  String toString() => r'postDetailControllerProvider';
 }
 
-abstract class _$MyNotifier extends $AsyncNotifier<PostDetailState> {
+abstract class _$PostDetailController extends $AsyncNotifier<PostDetailState> {
   late final _$args = ref.$arg as String;
   String get postId => _$args;
 
