@@ -234,3 +234,99 @@ final class UploadPostImageUseCaseProvider
 
 String _$uploadPostImageUseCaseHash() =>
     r'ed46d918ffab849666ffef70c066d15f2d1f4d43';
+
+@ProviderFor(getCommentsUseCase)
+final getCommentsUseCaseProvider = GetCommentsUseCaseProvider._();
+
+final class GetCommentsUseCaseProvider
+    extends
+        $FunctionalProvider<
+          GetCommentsUseCase,
+          GetCommentsUseCase,
+          GetCommentsUseCase
+        >
+    with $Provider<GetCommentsUseCase> {
+  GetCommentsUseCaseProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'getCommentsUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$getCommentsUseCaseHash();
+
+  @$internal
+  @override
+  $ProviderElement<GetCommentsUseCase> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  GetCommentsUseCase create(Ref ref) {
+    return getCommentsUseCase(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(GetCommentsUseCase value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<GetCommentsUseCase>(value),
+    );
+  }
+}
+
+String _$getCommentsUseCaseHash() =>
+    r'aa79dfa3aca7b6ab9c5f852835686b195af6e8c3';
+
+@ProviderFor(getPostDetailUseCase)
+final getPostDetailUseCaseProvider = GetPostDetailUseCaseProvider._();
+
+final class GetPostDetailUseCaseProvider
+    extends
+        $FunctionalProvider<
+          GetPostDetailUseCase,
+          GetPostDetailUseCase,
+          GetPostDetailUseCase
+        >
+    with $Provider<GetPostDetailUseCase> {
+  GetPostDetailUseCaseProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'getPostDetailUseCaseProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$getPostDetailUseCaseHash();
+
+  @$internal
+  @override
+  $ProviderElement<GetPostDetailUseCase> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  GetPostDetailUseCase create(Ref ref) {
+    return getPostDetailUseCase(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(GetPostDetailUseCase value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<GetPostDetailUseCase>(value),
+    );
+  }
+}
+
+String _$getPostDetailUseCaseHash() =>
+    r'ef1529f412cf0c58c1ea3355b2751f8d4dd37870';

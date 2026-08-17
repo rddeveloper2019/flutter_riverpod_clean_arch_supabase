@@ -167,7 +167,8 @@ class PostListController extends _$PostListController {
       case PostCreatedDispatched(post: final post):
         prependNewPost(post);
         requestScrollToTp();
-      case _:
+      case PostUpdatedDispatched(post: final post):
+        applyUpdatedPost(post);
     }
   }
 
@@ -176,6 +177,17 @@ class PostListController extends _$PostListController {
     if (current == null) return;
     if (current.posts.any((p) => p.postId == post.postId)) return;
     state = AsyncData(current.copyWith(posts: [post, ...current.posts]));
+  }
+
+  void applyUpdatedPost(PostDisplay updated) {
+    final current = state.value;
+    if (current == null) return;
+    final idx = current.posts.indexWhere(((p) => p.postId == updated.postId));
+    if (idx < 0) return;
+    final nextList = [...current.posts];
+    nextList[idx] = updated;
+
+    state = AsyncData(current.copyWith(posts: nextList));
   }
 
   void requestScrollToTp() {

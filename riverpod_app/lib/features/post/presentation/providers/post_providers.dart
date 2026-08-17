@@ -32,3 +32,13 @@ CreatePostUseCase createPostUseCase(Ref ref) {
 UploadPostImageUseCase uploadPostImageUseCase(Ref ref) {
   return UploadPostImageUseCase(ref.watch(postRepositoryProvider));
 }
+
+@riverpod
+GetCommentsUseCase getCommentsUseCase(Ref ref) {
+  return GetCommentsUseCase(ref.watch(postRepositoryProvider));
+}
+
+@riverpod
+GetPostDetailUseCase getPostDetailUseCase(Ref ref) {
+  return GetPostDetailUseCase(ref.watch(postRepositoryProvider));
+}
